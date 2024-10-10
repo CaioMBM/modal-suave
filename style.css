@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(11, 11, 77);
+}
+
+#modal{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+button{
+    cursor: pointer;
+    padding: 3px;
+    transition: .3s;
+}
+
+button:hover{
+    background-color: rgb(153, 153, 153);
+}
+
+/* Animação */
+.showModal{
+    animation: showModal .8s linear;
+}
+
+@keyframes showModal{
+    from{
+        opacity: 0;
+        transform: scale(0);
+        transform: translateX(-100px);
+        
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateX(0);
+    }
+}
+
+.closeModal{
+    opacity: 0;
+    animation: closeModal 1s linear;
+}
+
+@keyframes closeModal{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
