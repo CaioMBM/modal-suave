@@ -17,4 +17,6 @@ function closeModal(){
     setTimeout(function() {
         modal.style.display = 'none'; // Esconde o modal após a animação
     }, 1000); // O tempo deve corresponder à duração da animação (.closeModal 1s)
+    
+    // Precisa do setTimeout() porque quando o display de um elemento tem o valor “none”, ele é removido do fluxo de renderização e isso impede que qualquer animação CSS seja exibida.
 }
